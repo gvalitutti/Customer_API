@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(39, 33, 33);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background: url('foto/home/biglietti da visita 3 copia.jpg') no-repeat center center fixed;
+    background-size: cover; /* Per garantire che l'immagine di sfondo copra tutto l'elemento body */
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: transparent;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em; /* Aumenta la dimensione dei caratteri */
+}
+
+.navbar a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #f1ecec00;
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+    font-size: 250%;
+}
+
+.content h1 {
+    font-family: 'Cinzel', serif; /* Utilizza il font Cinzel per l'h1 */
+    font-size: 5em; /* Dimensione del carattere molto grande */
+    color: #333; /* Colore del testo */
+    text-shadow: 1px 1px 2px black; /* Ombra del testo */
+    white-space: nowrap; /* Per evitare il wrap del testo */
+    overflow: hidden; /* Nasconde il testo che supera la larghezza */
+    position: absolute; /* Posizione assoluta per il movimento */
+    animation: moveRightToLeft 10s linear infinite; /* Animazione per il movimento da destra a sinistra */
+}
+
+@keyframes moveRightToLeft {
+    0% { right: 100%; } /* Parte da destra del contenitore */
+    100% { right: -100%; } /* Si sposta completamente verso sinistra */
+}
